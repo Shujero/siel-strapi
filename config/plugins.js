@@ -1,8 +1,7 @@
-const crypto = require('crypto');
-
-module.exports = () => ({
-  // Other plugin configurations...
-  'users-permissions': {
-    jwtSecret: crypto.randomBytes(16).toString('base64')
-  },
-});
+module.exports = ({ env }) => ({
+    // Other configurations...
+    'users-permissions': {
+      jwtSecret: env('JWT_SECRET'),
+    },
+  });
+  
