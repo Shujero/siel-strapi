@@ -1,7 +1,14 @@
 module.exports = ({ env }) => ({
+  connection: {
+    client: 'postgres',
     connection: {
-      client: 'sqlite',
-      filename: env('DATABASE_FILENAME', '.tmp/data.db'), // Default to .tmp/data.db if DATABASE_FILENAME is not specified
+      host: env('DATABASE_HOST', '127.0.0.1'),
+      port: env.int('DATABASE_PORT', 5432),
+      database: env('DATABASE_NAME', 'strapi'),
+      user: env('DATABASE_USERNAME', 'strapi'),
+      password: env('DATABASE_PASSWORD', 'yourpassword'),
+      ssl: env.bool('DATABASE_SSL', false),
     },
-  });
-  
+    debug: false,
+  },
+});
