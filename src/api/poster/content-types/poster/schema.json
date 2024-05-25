@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posters",
+  "info": {
+    "singularName": "poster",
+    "pluralName": "posters",
+    "displayName": "Poster"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "poster": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
